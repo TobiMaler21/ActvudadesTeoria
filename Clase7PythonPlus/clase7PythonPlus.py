@@ -13,6 +13,7 @@ def Goku (ruta,key):
         return lista_de_nombres
 
 def save_nombres (data, key):
+        """guarda los datos recibidos en el archivo file.json"""
         lista = list(map(lambda x: x[key], data))
         with open("file.json", "w") as file:
             json.dump(lista,file, indent=4, ensure_ascii=False)
