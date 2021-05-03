@@ -26,13 +26,13 @@ layout = [[sg.Text('Elija que informacion quiere ver')],
 window = sg.Window('Activivdad por Python +', layout)
 
 while True:
-        event, values = window.read()
-        if event == 'Aplicaciones de Appstore':
-                data = Goku('./appstore_games.csv','Average User Rating')
-                save_nombres(data,'Name')
+    event, values = window.read()
+    if event == 'Aplicaciones de Appstore':
+        data = Goku('./appstore_games.csv','Average User Rating')
+        save_nombres(data,'Name')
 
-        elif event == 'Titulos de Netflix':
-                data = Goku('./netflix_titles.csv','rating')
-                save_nombres(data,'title')
-        elif event == None or 'Cancel':
-                break
+    elif event == 'Titulos de Netflix':
+        data = Goku('./netflix_titles.csv','rating')
+        save_nombres(data,'title')
+    elif event == None or 'Cancel':
+        break
